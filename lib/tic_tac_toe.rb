@@ -38,6 +38,7 @@ def position_taken?(index)
 end
 
 def valid_move?(index)
+  binding.pry
   index.between?(0,8) && !position_taken?(index)
 end
 
@@ -60,7 +61,6 @@ def current_player
    index = gets.strip
    input=input_to_index(index)
   if valid_move?(input)
-  binding.pry
      move(input, current_player)
      display_board
 else
