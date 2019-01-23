@@ -1,3 +1,4 @@
+require 'pry'
 class TicTacToe
 
 def initialize (board = nil)
@@ -56,6 +57,7 @@ def current_player
  
  def turn 
   puts "Please enter 1-9:"
+  binding.pry
    index = gets.strip
    input=input_to_index(index)
   if valid_move?(input)
