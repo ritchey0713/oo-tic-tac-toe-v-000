@@ -58,9 +58,9 @@ def current_player
  def turn 
   puts "Please enter 1-9:"
    index = gets.strip
-  binding.pry
    input=input_to_index(index)
   if valid_move?(input)
+  binding.pry
      move(input, current_player)
      display_board
 else
